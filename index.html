@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festive Birthday Wish Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+            animation: bounce 2s ease infinite, rotate 6s linear infinite;
+            cursor: pointer; /* Make the card clickable */
+        }
+        @keyframes bounce {
+            /* ... (your existing animation code) ... */
+        }
+        /* ... (your existing CSS styles) ... */
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="birthdayCard">
+            <h1>Happy Birthday visuuuuuu!</h1>
+            <p>Wishing you a day filled with joy, laughter, and lots of cake!</p>
+            <h4>please click on the card</h4>
+            <!-- Birthday boy/girl image -->
+            <img src="C:\Users\nikit\Downloads\balloon-991680_1280.jpg" alt="Birthday Boy" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <!-- Hidden greeting card (initially hidden with CSS) -->
+    <div class="card" id="greetingCard" style="display: none;">
+        <!-- Add your greeting card content here -->
+        <p>Yeah yenna side rdh little surprise to you this is made by me naiii!!!!!!!!!!!!!wacth the vedio and voice record</p>
+        <p>Wishing you a fantastic day filled with happiness and celebrations.Love you naii</p>
+        <!-- Add more content or images for your greeting card -->
+    </div>
+
+    <script>
+        // JavaScript to show a confirmation dialog before opening the second card
+        const birthdayCard = document.getElementById("birthdayCard");
+        const greetingCard = document.getElementById("greetingCard");
+    
+        birthdayCard.addEventListener("click", function () {
+            const shouldOpenGreetingCard = window.confirm("Do you want to open the greeting card?");
+            if (shouldOpenGreetingCard) {
+                birthdayCard.style.display = "none"; // Hide the birthday card
+                greetingCard.style.display = "block"; // Show the greeting card
+            }
+        });
+    </script>
+</body>
+</html>
